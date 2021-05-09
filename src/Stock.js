@@ -91,11 +91,14 @@ class Stock extends React.Component {
             <div id = "maincont">
                 <Row>
                     <Col id = "bull">
-                        <img src = {Bull} alt = ""/>
+                        <img className = "imghome" src = {Bull} alt = ""/>
                     </Col>
                     <Col id = "col2">
                         <Row>
                             <h1 id = "title"> Stock Charting Application</h1>
+                        </Row>
+                        <Row id = "about">
+                            <a href = "https://github.com/sking115422/NMIX7110FinalProject#readme" > About This App</a>
                         </Row>
                         <Row>
                             <Form inline id = "searchform" className='mx-auto' onSubmit={this.handleSubmit}>
@@ -115,7 +118,7 @@ class Stock extends React.Component {
 
                     </Col>
                     <Col id = "bear">
-                        <img src = {Bear} alt = ""/>
+                        <img className = "imghome" src = {Bear} alt = ""/>
                     </Col>
                 </Row>
                 
@@ -134,7 +137,7 @@ class Stock extends React.Component {
                         ]}
                         layout={{
                             width: '1200', 
-                            height: '700', 
+                            height: '650', 
                             title: `Ticker: ${this.state.stockTicker}`,
                             font: {
                                 size:16
