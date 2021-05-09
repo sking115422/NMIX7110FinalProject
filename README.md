@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# NMIX 7110 - Final Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Stock Charting Application
 
-## Available Scripts
+### Authors
+- Spencer King
 
-In the project directory, you can run:
+## Project Description
+As an avid investor, I use many diffenent charting applications on a regular basis so for this project I thought
+it would be a fun idea to try to create my own. The application I created is very straight forward. It is designed to allow
+the user to input a stock ticker into the provided form on the webpage. Once the search button is hit, the application
+retrieves the necessary stock data from an API and displays it graphically to the user for analysis. 
 
-### `npm start`
+The charting package I chose to use has many feature includeing zooming in and out on the graph, selecting data in certain ranges
+by draging a box around it with your mouse, and downloading the chart as a .png file. The application also returns the last 20 years
+of applicable data for each stock.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## API
+This application retrieves all of its data from a free API called Alpha Vantage. It is a very robust API, and has tons of different options
+especially if you pay for your data. However, for the purposes of this application I chose to use the free daily data.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+For the API call I used this exact url for reference: https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${this.state.stockTicker}&outputsize=full&apikey=${API_KEY}
 
-### `npm test`
+Also below is a link to the API documentation where you can find example of the JSON files that are being returned. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Link to Alpha Vantage Documentaion](https://www.alphavantage.co/documentation/)
 
-### `npm run build`
+## Framework & Runtime Enviroment
+In this project I am using React and Node.js. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+React is an open-source, front end, JavaScript library for building user interfaces or UI components. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Dependencies
+This project has several key dependencies. I used react-bootstrap components to help give the webpage a clean polished look, and I used react-plotly for data visualization and charting. The links to the documentation for both can be found below.
 
-### `npm run eject`
+- [Link to react-bootstrap Documentation](https://react-bootstrap.github.io/)
+- [Link to react-plotly Documentation](https://plotly.com/javascript/react/)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Hosting
+For hosting this project I chose to use Netlify. Netlify is an intuitive Git-based workflow and powerful serverless platform to build, deploy, and collaborate on web apps. The entire process took less than 10 minutes, and I was extremely please with the results. I would highly recommend for anyone working with React and Node.js. Below I have left links to Netlify's website, and great video for getting the hosting set up. 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [Netlify](https://www.netlify.com/)
+- [Netlify Setup Video](https://www.youtube.com/watch?v=sGBdp9r2GSg&t=31s)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
